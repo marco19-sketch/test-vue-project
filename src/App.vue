@@ -11,7 +11,7 @@ const titleClass = ref('title')
 const count = ref(0)
 const text = ref('')
 // ######## EVENT LISTENER  #################
-function increment(){
+function increment() {
   count.value++
 }
 </script>
@@ -30,13 +30,22 @@ function increment(){
   <p>{{ counter.val }}</p>
   <button @click="increment">Count is: {{ count }}</button>
   <p>To bound the input and the p below I'm using the v-model directive</p>
-  <ul>In order to work it needs:
+  <ul>
+    In order to work it needs:
     <li>a ref variable: <code>const text = ref('')</code></li>
     <li>the v-model on the ref variable: <code>v-model='text'</code></li>
-    <li>a target element, in this case it is a: <pre v-pre><code>&lt;p&gt;{{ text }}&lt;/p&gt;</code></pre></li>
+    <li>
+      a target element, in this case it is a:
+      <pre v-pre><code>&lt;p&gt;{{ text }}&lt;/p&gt;</code></pre>
+    </li>
   </ul>
-  <input id='v-model' v-model="text">
-  <p>{{ text }}</p>
+  <div id="input-container">
+    <label for="v-model"
+      >Type in the box below
+      <input id="v-model" v-model="text" />
+    </label>
+    <p>{{ text }}</p>
+  </div>
 </template>
 
 <style scoped>
@@ -48,5 +57,11 @@ function increment(){
 }
 pre {
   display: inline;
+}
+#input-container {
+  border: 1px, solid, blue;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 10px;
 }
 </style>
