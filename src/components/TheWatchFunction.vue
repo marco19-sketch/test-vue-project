@@ -21,26 +21,27 @@ watch(question, async (newQuestion) => {
   }
 })
 
-
-
-// // single ref
-// watch(x, (newX) => {
-//   console.log(`x is ${newX}`)
-// })
-
-// // getter
-// watch(
-//   () => x.value + y.value,
-//   (sum) => {
-//     console.log(`sum of x + y is: ${sum}`)
-//   }
-// )
 </script>
 
 <template>
+  <div>
+  <h2>This is the 'TheWatchFunction' component</h2>
+  <h3>It watches if an '?' is included in the question</h3>
+  <h3>if it is the answer will show up</h3>
   <p>
     Ask a yes/no question:
     <input v-model="question" :disabled="loading" />
   </p>
   <img :src="answer" alt="" />
+  </div>
 </template>
+
+<style scoped>
+div {
+  border: 2px solid black;
+  border-radius: 20px;
+  margin: 20px auto;
+  padding: 20px;
+  width: 500px;
+}
+</style>
