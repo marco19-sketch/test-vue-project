@@ -72,6 +72,7 @@ const eliminaStudente = async (id) => {
     studenti.length = 0;
     studenti.push(...filtered)
     success.value = response.data.msg
+    console.log('success', success.value)
   } catch (err) {
     error.value = `Non è stato possibile eliminare lo studente con id: ${id}: ${err}`
     console.log(err)
