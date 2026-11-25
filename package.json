@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "axios": "^1.16.1",
-    "vue": "^3.5.32"
+    "vue": "^3.5.46"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
